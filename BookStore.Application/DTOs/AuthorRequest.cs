@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BookStoreApi;
+namespace BookStore.Application.DTOs;
 
 public class AuthorRequest
 {

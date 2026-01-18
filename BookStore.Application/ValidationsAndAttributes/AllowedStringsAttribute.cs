@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BookStoreApi;
+namespace BookStore.Application.ValidationsAndAttributes;
 
 public class AllowedStringsAttribute(string[] allowedValues) : ValidationAttribute
 {
