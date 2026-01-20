@@ -11,6 +11,8 @@ public class Book : BaseEntity
     public int AuthorId { get; set; }
     public Author Author { get; set; }
     
+    public DateTime? PublishYear { get; set; }
+    
     public ICollection<BookGenre> Genres { get; set; }
     
 }

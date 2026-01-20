@@ -7,6 +7,6 @@ public interface IBookService
 {
     Book CreateBook(BookRequest request);
     Book? GetById(int id);
-    List<Book> GetBooks();
+    List<BookDto> GetBooks();
     bool DeleteBook(int id);
 }

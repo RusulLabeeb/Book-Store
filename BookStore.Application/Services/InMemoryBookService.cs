@@ -28,7 +28,7 @@ public class InMemoryBookService : IBookService
         return Books.FirstOrDefault(b => b.Id == id);
     }
 
-    public List<Book> GetBooks() => Books;
+    public List<BookDto> GetBooks() => throw new NotImplementedException();
 
 
     public bool DeleteBook(int id)

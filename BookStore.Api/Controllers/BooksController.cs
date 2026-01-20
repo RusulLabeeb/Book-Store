@@ -1,3 +1,4 @@
+using BookStore.Api.Common;
 using BookStore.Application.DTOs;
 using BookStore.Application.Interfaces;
 using BookStore.Application.Services;
@@ -6,9 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Api.Controllers;
 
-[ApiController]
-[Route("/[controller]")]
-public class BooksController(IBookService bookService) : ControllerBase
+public class BooksController(IBookService bookService) : BaseController
 {
     [HttpGet]
     public ActionResult<List<Book>> GetBooks()

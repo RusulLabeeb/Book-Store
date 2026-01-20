@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using BookStore.Application.Interfaces;
 using BookStore.Application.Services;
 using BookStore.Application.ValidationsAndAttributes;
@@ -19,7 +20,8 @@ builder.Services.AddDbContext<BookStoreDbContext>((sp, options) =>
 });
 builder.Services.AddScoped<IBookStoreDbContext, BookStoreDbContext>();
 // builder.Services.AddSingleton<IBookService, InMemoryBookService>();
-builder.Services.AddSingleton<IBookService, BookService>();
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<BookRequestValidator>();
 var app = builder.Build();

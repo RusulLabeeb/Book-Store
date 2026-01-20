@@ -6,6 +6,6 @@ namespace BookStore.Application.DTOs;
 public class BookRequest
 {
     public string Title { get; set; }
-    [AllowedStrings(["Novel", "Documentary"])]
-    public string Category { get; set; }
+    [Required]
+    public int? AuthorId { get; set; }
 }

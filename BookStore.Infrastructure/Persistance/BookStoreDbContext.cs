@@ -19,17 +19,6 @@ public class BookStoreDbContext : DbContext, IBookStoreDbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Book>()
-            .Property(b => b.Title)
-            .HasMaxLength(200);
-        modelBuilder.Entity<Book>()
-            .HasOne(b => b.Author)
-            .WithMany(a => a.Books)
-            .HasForeignKey(b => b.AuthorId);
-
-        modelBuilder.Entity<AuthorBio>()
-            .HasOne(a => a.Author).WithOne(a => a.AuthorBio);
-        
-        
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BookStoreDbContext).Assembly);
     }
 }
