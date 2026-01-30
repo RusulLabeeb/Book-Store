@@ -15,6 +15,7 @@ public class Book : BaseEntity, IAuditable, ISoftDeletable
     public DateTime? PublishYear { get; set; }
     
     public ICollection<BookGenre> Genres { get; set; }
+    public ICollection<Loan> Loans { get; set; }
 
     public int? UpdatedBy { get; set; }
     public bool IsDeleted { get; set; }

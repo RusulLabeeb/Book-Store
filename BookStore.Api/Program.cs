@@ -43,6 +43,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<BookRequestValidator>();
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+builder.Services.AddScoped<ILoanService, LoanService>();
 
 builder.Services.AddScoped<LogActivityAttribute>();
 
